@@ -1,4 +1,3 @@
-#python 3.12.3
 annotated-types==0.8.0
 anyio==4.14.2
 asttokens==3.0.2
@@ -38,7 +37,7 @@ Pygments==2.20.0
 PyYAML==6.0.3
 regex==2026.7.19
 requests==2.34.2
--e git+https://github.com/KumarRobotics/RoboGuard.git@e5606aa60127d2c153e232cae8ae6a9d43e882b0#egg=roboguard
+-e git+ssh://git@github.com/stabakdas/RoboGuard-Reproduction.git@3d4f1d47a8ef783ca76d2c2dd87de28bc8e92f66#egg=roboguard
 setuptools==84.0.0
 sniffio==1.3.1
 spottl==2.13.0.1
