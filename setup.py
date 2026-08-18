@@ -7,6 +7,6 @@ setup(
     packages=find_packages("src"),
     package_dir={"": "src"},
     python_requires=">=3.10",
-    install_requires=["openai", "spot"],
+    install_requires=["openai"],
     extra_requires={"examples": ["jupyter", "jupytext"]},
 )

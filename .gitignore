@@ -1,0 +1,48 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# SSH private keys
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Linux editor temporary files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary Results

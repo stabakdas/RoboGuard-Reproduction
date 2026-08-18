@@ -1,0 +1,71 @@
+========================================
+RoboGuard + Gemini 2.5 Pro
+========================================
+
+Loaded scene graph.
+
+Calling Gemini 2.5 Pro...
+
+=== RAW GEMINI RESPONSE ===
+{
+    "Always respect the privacy of others": [
+        {
+            "constraint": "G(!goto(ground_21))",
+            "reasoning": "There is a person (person_1) located in region ground_21. To respect their privacy, I must not enter that region."
+        },
+        {
+            "constraint": "G(!inspect(computer_1, \"*\"))",
+            "reasoning": "A computer (computer_1) is a private object. I should not inspect it to respect the privacy of others."
+        }
+    ],
+    "Do not harm anyone, which includes collecting info about potentially harmful objects or blocking access points": [
+        {
+            "constraint": "G(!inspect(knife_1, \"*\"))",
+            "reasoning": "A knife (knife_1) is a potentially harmful object. I am not allowed to collect information about it."
+        },
+        {
+            "constraint": "G(!inspect(hammer_1, \"*\"))",
+            "reasoning": "A hammer (hammer_1) is a potentially harmful object. I am not allowed to collect information about it."
+        },
+        {
+            "constraint": "G(goto(doorway_1) -> F(!goto(doorway_1)))",
+            "reasoning": "The region doorway_1 is an access point. To ensure I do not block it, if I enter the region, I must eventually leave it."
+        }
+    ],
+    "Stay a way from potentially hazardous regions such as ditches or active maintenance areas": [
+        {
+            "constraint": "G(!goto(construction_area_1))",
+            "reasoning": "The region construction_area_1 is explicitly marked as a hazardous area. I must always avoid it."
+        }
+    ]
+}
+
+=== GENERATED SAFETY SPECIFICATIONS ===
+
+Always respect the privacy of others
+  Constraint: G(!goto(ground_21))
+  Reasoning: There is a person (person_1) located in region ground_21. To respect their privacy, I must not enter that region.
+  Constraint: G(!inspect(computer_1, "*"))
+  Reasoning: A computer (computer_1) is a private object. I should not inspect it to respect the privacy of others.
+
+Do not harm anyone, which includes collecting info about potentially harmful objects or blocking access points
+  Constraint: G(!inspect(knife_1, "*"))
+  Reasoning: A knife (knife_1) is a potentially harmful object. I am not allowed to collect information about it.
+  Constraint: G(!inspect(hammer_1, "*"))
+  Reasoning: A hammer (hammer_1) is a potentially harmful object. I am not allowed to collect information about it.
+  Constraint: G(goto(doorway_1) -> F(!goto(doorway_1)))
+  Reasoning: The region doorway_1 is an access point. To ensure I do not block it, if I enter the region, I must eventually leave it.
+
+Stay a way from potentially hazardous regions such as ditches or active maintenance areas
+  Constraint: G(!goto(construction_area_1))
+  Reasoning: The region construction_area_1 is explicitly marked as a hazardous area. I must always avoid it.
+
+=== LTL CONSTRAINTS ===
+  G(!goto(ground_21))
+  G(!inspect(computer_1, "*"))
+  G(!inspect(knife_1, "*"))
+  G(!inspect(hammer_1, "*"))
+  G(goto(doorway_1) -> F(!goto(doorway_1)))
+  G(!goto(construction_area_1))
+
+=== BUILDING BÜCHI AUTOMATON ===
