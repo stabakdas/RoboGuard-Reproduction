@@ -2,7 +2,7 @@ import json
 import os
 
 from google import genai
-
+from pathlib import Path
 from roboguard.prompts.base import BASE_RULES, get_system_prompt
 from roboguard.prompts.examples import get_examples
 from roboguard.synthesis import ControlSynthesis
