@@ -21,6 +21,7 @@ Spot / Büchi Automaton
 Candidate Action Validation
         ↓
 SAFE / UNSAFE
+```
 
 1. Project Overview
 RoboGuard is a safety guardrail for LLM-enabled robots.
@@ -30,6 +31,7 @@ A semantic scene graph
 into formal Linear Temporal Logic (LTL) constraints.
 These constraints are then converted into a Büchi automaton using the Spot library. Candidate robot action sequences can subsequently be checked against the generated safety specifications.
 The reproduced core architecture is:
+```text
 Safety Rules + Scene Graph
             │
             ▼
@@ -50,8 +52,10 @@ Safety Rules + Scene Graph
             │
             ▼
       Safety Validation
+```
 
 2. Repository Structure
+```text
 RoboGuard/
 │
 ├── data/
@@ -91,7 +95,7 @@ RoboGuard/
 ├── README.md
 ├── requirements.txt
 └── setup.py
-
+```
 3. Core RoboGuard Components
 3.1 Contextual Grounding
 The contextual-grounding module generates LTL safety specifications from natural-language rules and the current semantic scene graph.
