@@ -25,14 +25,24 @@ def read_requirements():
     return requirements
 
 
+# Version history:
+# 0.1.0 - Original/reproduction work on Python 3.12
+# 0.2.0 - RoboGuard + Gemini
+# 0.3.0 - RoboGuard + SPOT + SPINE + Gemini-SPINE
+
 setup(
     name="roboguard_reproduce",
-    version="0.2.0", #0.2.0  → Gemini integration
-    description="Reproduction of Only RoboGuard(Excluding SPINE) on Python 3.12 and Gemini integration of RoboGuard",
-    author="Stabak",
+    version="0.3.0",
+    description=(
+        "RoboGuard reproduction with Gemini integration and "
+        "Gemini-enabled SPINE integration"
+    ),
+    author="Stabak Das",
     author_email="stabak.das@ieee.org",
     packages=find_packages("src"),
     package_dir={"": "src"},
     python_requires="==3.12.*",
     install_requires=read_requirements(),
 )
+
+
