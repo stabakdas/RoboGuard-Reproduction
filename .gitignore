@@ -17,15 +17,12 @@ __pycache__/
 *$py.class
 
 # Environment variables / secrets
-.env
-.env.*
 !.env.example
 
 # Jupyter
 .ipynb_checkpoints/
 
 # IDE / Editor
-.vscode/
 .idea/
 
 # Linux editor temporary files
@@ -47,3 +44,5 @@ dist/
 htmlcov/
 
 # Temporary Results
+config.bat
+node_modules
